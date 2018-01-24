@@ -1,0 +1,30 @@
+<launch>
+    
+	<node pkg="fontys_agv_driver" respawn="false" name="pwm_out_lf" type="pwm_out_lf.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="pwm_out_rf" type="pwm_out_rf.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="pwm_out_lb" type="pwm_out_lb.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="pwm_out_rb" type="pwm_out_rb.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="dir_out_lf" type="dir_out_lf.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="dir_out_rf" type="dir_out_rf.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="dir_out_lb" type="dir_out_lb.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="dir_out_rb" type="dir_out_rb.py" output="screen">    
+    </node>
+
+	<node pkg="fontys_agv_driver" respawn="false" name="twist_to_vec" output="screen">    
+    </node>
+ 
+</launch>
