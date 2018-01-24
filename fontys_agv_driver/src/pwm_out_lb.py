@@ -34,6 +34,7 @@ def init():
     rospy.Subscriber('/vec_wheel_lb', Float64, vec_to_pwm)
        
 def vec_to_pwm(data):
+    global d
     os.write(d,str(int(data.data/16*5500)))
     
 if __name__ == '__main__':
@@ -41,5 +42,6 @@ if __name__ == '__main__':
         init()
         rospy.spin()
     except rospy.ROSInterruptException:
+        os.close(d)
         rospy.signal_shutdown('pwm_out_lb')
         pass

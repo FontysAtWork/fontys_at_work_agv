@@ -42,5 +42,6 @@ if __name__ == '__main__':
         init()
         rospy.spin()
     except rospy.ROSInterruptException:
+        os.close(d)
         rospy.signal_shutdown('pwm_out_lf')
         pass
